@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    background-color:#263238;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+i{
+    background-color: inherit;
+}
+
+/*input area*/
+.container{ 
+    padding: 20px;
+    font-weight:900;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+}
+.container h1{
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+input[type='text']{
+    border-radius: 10px;
+    height: 30px;
+    text-align: left;
+    padding-left: 9px;
+    margin-right: 20px;
+    margin-left : 10px;
+    font-size: 1.2rem;
+    background-color: srgb(199, 198, 197);
+    color: white;
+}
+button[type='submit']{
+    border-radius: 10px;
+    padding: 7px;
+    width: 70px;
+    background-color: rgb(5, 114, 1);
+    cursor: pointer;
+}
+button[type='submit']:hover{
+    background-color: rgb(106, 170, 86);
+    transition: all 0.3s ease;
+}
+.display{  
+    margin-left: 26.5%;
+}
+
+/*upper div*/
+.upper{
+    height: 350px;
+    width: 800px;
+    background-color: #313e45;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-bottom: 4px;
+    display: flex;
+
+}
+.left{
+    background-color: inherit;
+    width: 450px;
+    border-top-left-radius: 50px;
+}
+.day-details {
+    background-color: inherit;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    width: 50%;
+    font-size: 3rem;
+}
+.loc{
+    margin-top: 180px;
+    margin-left: 15px;
+    background-color: inherit;
+    font-size: 1.7rem;
+    display: flex;
+    width: 250px;
+
+}
+.loc p{
+    padding-left: 10px;
+}
+.right{
+    height: 300px;
+    width: 340px;
+    position: relative;
+    top: 40px;
+    background-color: inherit;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+}
+.title{
+    font-size: 2rem;
+}
+.right i{
+    font-size: 6rem;
+}
+
+
+
+
+
+/* lower div */
+.lower{
+    display: flex;
+}
+
+/*temp div*/
+.temp{
+    background-color: #313e45;
+    height: 250px;
+    width: 350px;
+    margin-right: 4px;
+    border-bottom-left-radius: 50px;
+    font-size: 4rem;
+    display: grid;
+    place-items: center;
+}
+
+
+
+/*weather details div*/
+.weather-details{
+    background-color: #313e45;
+    display: flex;
+    height: 250px;
+    width:  446px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.6rem;
+}
+.names, .values{
+    background-color: inherit;
+    margin-top: 3.4rem;
+    margin-left: 4rem ;
+}
+p{
+    background-color: inherit;
+}
+
+/*error*/
+.error{
+    font-size: 30px;
+    margin-left: 16%;
+}

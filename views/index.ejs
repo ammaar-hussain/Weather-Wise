@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/289754dadc.js" crossorigin="anonymous"></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Wizard</h1>
+        <form action="/weather" method="get">
+            <label for="city">Enter city : </label>
+            <input type="text" id="city" name="city">
+            <button type="submit">Check</button>
+        </form>
+    </div>
+    <div class="display">
+        <% if(locals.weather){ %>
+            <div class="upper">
+                <div class="left">
+                    <div class="day-details">
+                    <p><%= day %></p>
+                    <p><%= today %></p>
+                    </div>
+                    <div class="loc">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p><%= weather.name %>, <%= weather.sys.country %> </p>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <p class="title">Weather Status</p>
+                    <i class="fa-solid fa-<%= type %>"></i>
+                    <p><%= weather.weather[0].main %></p>
+                </div>
+            </div>
+
+            
+            <div class="lower">
+                <div class="temp">
+                  <p><%= weather.main.temp  %> &deg;C</p>  
+                </div>
+                <div class="weather-details">
+                    <div class="names">
+                        <p>Max Temp </p>
+                        <p>Min Temp </p>
+                        <p>Humidity </p>
+                        <p>Wind Speed </p>
+                    </div>
+                    <div class="values">
+                       <p><%= weather.main.temp_max %>&deg;C</p>
+                       <p><%= weather.main.temp_min %>&deg;C</p>
+                       <p><%= weather.main.humidity %> %</p>
+                       <p><%= weather.wind.speed %> km/h</p>  
+                    </div>
+                </div>
+            </div>
+            
+        <% } %>
+
+
+        <% if(locals.error){ %>
+            <div class="error">
+                <p><%= error %></p> 
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
