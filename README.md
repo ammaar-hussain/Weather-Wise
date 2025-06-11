@@ -1,6 +1,6 @@
 # Weather-Wizard
 1. Clone the repository on your local device.
-2. Install all the required dependencies using the below mentioned command on your terminal:
+2. Enter the cloned directory and install all the required dependencies using the below mentioned command on your terminal:
 
    ```
    npm i
